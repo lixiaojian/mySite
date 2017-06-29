@@ -1,0 +1,58 @@
+{
+  "name": "lxj-resume",
+  "version": "1.0.0",
+  "description": "李晓健的个人主页",
+  "keywords": [
+    "react",
+    "javascript",
+    "resume",
+    "ES6",
+    "ES2015"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lixiaojian/myNote.git"
+  },
+  "license": "ISC",
+  "scripts": {
+    "dev": "node server-local.js",
+    "build": "webpack --config webpack.config.prod.js --progress --colors"
+  },
+  "author": "lixiaojian",
+  "dependencies": {
+    "antd": "^2.9.1",
+    "fullpage.js": "^2.9.4",
+    "jquery": "^1.12.4",
+    "jquery.easing": "^1.4.1",
+    "normalize-css": "^2.3.1",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "react-fullpage": "^0.1.16"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.7.7",
+    "babel-core": "^6.24.1",
+    "babel-loader": "^6.4.1",
+    "babel-plugin-import": "^1.1.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "clean-webpack-plugin": "^0.1.16",
+    "css-loader": "^0.28.0",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "file-loader": "^0.11.1",
+    "image-webpack-loader": "^3.3.0",
+    "json-loader": "^0.5.4",
+    "less": "^2.7.2",
+    "less-loader": "^4.0.3",
+    "optimize-css-assets-webpack-plugin": "^1.3.2",
+    "postcss-loader": "^1.3.3",
+    "react-hot-loader": "^1.3.1",
+    "style-loader": "^0.16.1",
+    "url-loader": "^0.5.8",
+    "webpack": "^2.3.3",
+    "webpack-dev-server": "^2.4.2",
+    "webpack-hot-middleware": "^2.18.0"
+  },
+  "theme": "./theme.js"
+}

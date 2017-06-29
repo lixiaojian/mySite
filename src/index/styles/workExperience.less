@@ -1,0 +1,142 @@
+.timeline-warpper{
+  position: relative;
+  height: 100%;
+  h2{
+    font-weight: normal;
+  }
+  .timeline{
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    font-size: 18px;
+    transition: all 1s ease-in-out 0.5s;
+  }
+  .line_white {
+    height: 5px;
+    width: 100%;
+    background: rgba(255, 255, 255, .6);
+    position: absolute;
+    bottom: 204px;
+    left: 0;
+    z-index: 0;
+  }
+  .step-box{
+    position: absolute;
+    bottom: 50px;
+    transition: transform .5s ease-in-out;
+  }
+
+  .year{
+    cursor: default;
+    color: rgba(255, 255, 255, .5);
+    font-size: 60px;
+    color: #fff;
+  }
+  .timeList_item {
+    display: inline-block;
+    bottom: 83px;
+    position: relative;
+    width: 150px;
+    padding: 30px;
+    margin: 20px auto;
+    box-sizing: border-box;
+    font-size: 48px;
+    line-height: 1.5;
+    cursor: pointer;
+    margin: 0;
+    transition: opacity 1s;
+    &.avtive{
+      bottom: 80px;
+    }
+  }
+  .year-step{
+    padding: 30px 0;
+    bottom: 96px;
+  }
+  .circle{
+    display: inline-block;
+    width: 64px;
+    height: 64px;
+    background-color: rgba(0, 0, 0, 0.9);
+    border-radius: 50%;
+    border: 5px solid rgba(255, 255, 255, 0.8);
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    line-height: 64px;
+    cursor: pointer;
+    transition: all 0.5s ease-in;
+  }
+  .company-logo-box{
+    text-align: center;
+  }
+  .company-logo{
+    height: 50px;
+    display: inline-block;
+  }
+  .avtive{
+    .circle{
+      width: 90px;
+      height: 90px;
+      background-color: rgba(235, 0, 0, 0.9);
+      line-height: 90px;
+      font-size: 24px;
+      transition: all 0.5s ease-in;
+      border: none;
+    }
+    .timeList_item_title{
+      width: 500px;
+      top: -40px;
+      line-height: 100%;
+      transform: none;
+      font-size: 20px;
+      color: #fff;
+      text-align: center;
+      margin-left: -50%;
+      text-shadow: 0 0 10px rgba(0, 0, 0, .5);
+      transition: all 0.5s ease-in 0.3s;
+    }
+    .list_show{
+      font-size: 18px;
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  .timeList_item_title{
+    width: 150px;
+    position: absolute;
+    top: 158px;
+    left: -84px;
+    transform: rotate(-45deg);
+    text-align: right;
+    font-size: 14px;
+    letter-spacing: 1px;
+    transition: all 1s ease-in-out;
+    color: #fff;
+  }
+  .list_show{
+    text-align: left;
+    position: absolute;
+    //top: -350px;
+    left: -125px;
+    width: 400px;
+    height: 200px;
+    opacity: 0;
+    transition: all 1s ease-in;
+    transform: scale(0);
+    color: #fff;
+
+    .company-logo-box{
+      img{
+        height: 50px;
+        padding: 10px 0;
+      }
+    }
+    .key-label{
+      width: 100px;
+    }
+  }
+}

@@ -1,0 +1,48 @@
+@media print {
+  #app{
+    width: 1190px;
+  }
+  .download-link{
+    display: none!important;
+  }
+}
+.download-link{
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  display: inline-block;
+  padding: 5px 10px;
+  background: #00a0e9;
+  color: #fff;
+  z-index: 100;
+}
+.download-link:hover{
+  color: #fff;
+  background: #00aff9;
+}
+.main-warpper{
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .ant-layout{
+    flex: 1;
+  }
+  .ant-layout-sider{
+    color: #fff;
+    padding: 75px 0;
+  }
+  .ant-layout-content{
+    min-width: 800px;
+    padding: 50px 26px;
+    background: url("../images/body-bg.png") no-repeat center;
+    background-size: 100%;
+    .ant-card{
+      margin-bottom: 30px;
+    }
+    .ant-card,.ant-card-head{
+      background-color: transparent;
+      border: none;
+    }
+  }
+}

@@ -1,0 +1,118 @@
+@bg-transition-time: 4s;
+@transition-time: 2s;
+body{
+  color: #fff;
+}
+ul{
+  margin: 0;
+  list-style: none;
+}
+.index-page{
+  header{
+    background-color: #00a0e9;
+    height: 50px;
+    line-height: 50px;
+    font-size: 18px;
+    text-align: center;
+
+    a{
+      text-decoration: none;
+      display: inline-block;
+      width: 150px;
+      text-align: center;
+      line-height: 50px;
+      color: #fff;
+
+      &.active{
+        background-color: #0580bd;
+      }
+      &:active,&:focus{
+        border: none;
+        outline: none;
+      }
+    }
+
+  }
+  footer{
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+  }
+}
+.section:before{
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-size: 500%;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0;
+  transform: scale(4);
+  z-index: -1;
+}
+.section.has-show:before{
+  background-size: cover;
+  opacity: .2;
+  transform: scale(1);
+  transition: all @bg-transition-time;
+}
+.section-0:before{
+  background-image: url("../images/4.jpg");
+}
+.section-0{
+  background-color: rgba(0,158,142,.3);
+}
+
+.section-1{
+  background-color: rgba(16,71,169,.3);
+}
+.section-1:before{
+  background-image: url("../images/2.jpg");
+}
+.section-3:before{
+  background-image: url("../images/1.jpg");
+}
+.section-3{
+  background-color: rgba(255,165,0,.5);
+}
+.section-2:before{
+  background-image: url("../images/5.jpg");
+}
+.section-2{
+  background-color: rgba(255,108,0,.3);
+}
+.section-4:before{
+  background-image: url("../images/3.jpg");
+}
+.section-4{
+  background-color: rgba(249,177,50,.2);
+}
+.section-container{
+  transition-timing-function:cubic-bezier(0,0.69,0.29,1.19) !important;
+}
+.section{
+  text-align: center;
+  box-sizing: border-box;
+  overflow: hidden !important;
+  position: relative;
+  h2{
+    font-size: 26px;
+  }
+
+  .resume-list{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+  .resume-item{
+    flex: 1;
+    text-align: center;
+
+    img{
+      width: 250px;
+    }
+  }
+}

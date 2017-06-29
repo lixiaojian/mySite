@@ -1,0 +1,17 @@
+{
+  "apps":[
+    {
+      "name": "mySite",
+      "cwd": "/home/project/mySite/",
+      "script": "server.js",
+      "min_uptime": "60s",
+      "max_restarts": 30,
+      "error_file" : "/home/logs/mySite/mySite-err.log",
+      "out_file": "/home/logs/mySite/mySite-out.log",
+      "watch": false,
+      "env": {
+        "NODE_ENV": "production"  // 环境参数，当前指定为生产环境
+      }
+    }
+  ]
+}
