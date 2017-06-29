@@ -51,19 +51,12 @@ module.exports = {
                 'NODE_ENV': JSON.stringify('production')
             }
         }),
-        // 把通过npm包引用的第三方类库从入口文件中提取出来
-        // new webpack.optimize.CommonsChunkPlugin({
-        //     name: 'vendor',
-        //     minChunks: function (module, count) {
-        //         // 指定范围是js文件来自node_modules
-        //         return (module.resource && /\.js$/.test(module.resource) &&module.resource.indexOf(path.join(__dirname, '../node_modules')) === 0);
-        //     }
-        // }),
-        // // 把webpack的module管理相关基础代码从vendor中提取到manifest
-        // new webpack.optimize.CommonsChunkPlugin({
-        //     name: 'manifest',
-        //     chunks: ['vendor']
-        // }),
+        new webpack.optimize.ModuleConcatenationPlugin(),
+        //把通过npm包引用的第三方类库从入口文件中提取出来
+        new webpack.optimize.CommonsChunkPlugin({
+            name: 'vendor',
+            minChunks: 3
+        }),
         new webpack.optimize.UglifyJsPlugin({//混合代码插件
             compressor: {
                 warnings: false
@@ -71,7 +64,6 @@ module.exports = {
         }),
         new CleanWebpackPlugin(['build'],
             {
-                // root:'/full/project/path',
                 verbose: true,
                 dry: false
             }
@@ -83,9 +75,6 @@ module.exports = {
             cssProcessorOptions: { discardComments: {removeAll: true } },
             canPrint: false
         })
-        // new webpack.ProvidePlugin({
-        //     $: 'jquery'
-        // })
     ],
     module: {
         loaders: [
@@ -142,8 +131,5 @@ module.exports = {
     },
     resolve:{
         extensions:['.js','.jsx','.css']
-        // alias: {
-        //     'jquery': path.resolve(__dirname, 'vendor/jquery/jquery-1.11.3.min.js')
-        // }
     }
 };

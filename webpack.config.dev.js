@@ -89,9 +89,6 @@ module.exports = {
     },
     resolve:{
         extensions:['.js','.jsx','.css']
-        // alias: {
-        //     'jquery': path.resolve(__dirname, 'vendor/jquery/jquery-1.11.3.min.js')
-        // }
     },
     plugins:[
         new webpack.DefinePlugin({
@@ -102,10 +99,11 @@ module.exports = {
         new webpack.NoEmitOnErrorsPlugin(),
         //热启动
         new webpack.HotModuleReplacementPlugin(),
+        new webpack.optimize.CommonsChunkPlugin({
+            name: 'vendor',
+            minChunks: 3
+        }),
         //css单独打包
         new ExtractTextPlugin('')
-        // new webpack.ProvidePlugin({
-        //     $: 'jquery'
-        // })
     ]
 };
