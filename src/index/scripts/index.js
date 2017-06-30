@@ -47,7 +47,7 @@ class MainPage extends React.Component{
     };
     componentDidMount(){
         var hash = location.hash;
-        if('#index' === hash){
+        if('#index' === hash || !hash){
             var dom = document.querySelector('.section-0');
             if(dom){
                 setTimeout(function () {
