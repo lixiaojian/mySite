@@ -11,7 +11,7 @@ const compiler = webpack(config);
 const webpackDevOptions = {
     noInfo:true,
     historyApiFallback:true,
-    publicPath:config.output.publicPath,
+    publicPath:config[0].output.publicPath,
     headers:{
         'Access-Control-Allow-Origin':'*'
     }

@@ -1,9 +1,9 @@
 /**
  * Created by xiaojianli on 2017/4/20.
  */
-import React from 'react';
-import userHeaderImg from '../../common/images/user-header-img.png';
-import '../styles/baseMsg.less';
+const React = require('react');
+const userHeaderImg = require('../../common/images/user-header-img.png');
+require('../styles/baseMsg.less');
 
 const BaseMsg = () =>{
     return(
@@ -17,4 +17,4 @@ const BaseMsg = () =>{
     )
 }
 
-export default BaseMsg;
+module.exports = BaseMsg;

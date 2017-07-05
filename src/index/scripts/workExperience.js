@@ -1,14 +1,14 @@
 /**
  * Created by xiaojianli on 2017/4/21.
  */
-import React from 'react';
-import hongguanLogo from '../images/company-logo/hongguan.png';
-import visionetLogo from '../images/company-logo/weiqi.png';
-import wensiLogo from '../images/company-logo/wensi.png';
-import juliLogo from '../images/company-logo/juli.png';
-import '../styles/workExperience.less';
+const React = require('react');
+const hongguanLogo = require('../images/company-logo/hongguan.png');
+const visionetLogo = require('../images/company-logo/weiqi.png');
+const wensiLogo = require('../images/company-logo/wensi.png');
+const juliLogo = require('../images/company-logo/juli.png');
+require('../styles/workExperience.less');
 
-export default class WorkExperience extends React.Component {
+class WorkExperience extends React.Component {
     constructor(){
       super();
       this.state = {
@@ -114,3 +114,4 @@ export default class WorkExperience extends React.Component {
         )
     }
 }
+module.exports = WorkExperience;

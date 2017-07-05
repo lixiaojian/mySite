@@ -1,9 +1,9 @@
 /**
  * Created by xiaojianli on 2017/4/20.
  */
-import React from 'react';
+const React = require('react');
 
-import '../styles/aboutMe.less';
+require('../styles/aboutMe.less');
 
 const AboutMe = () => {
     const myMsg = [
@@ -40,4 +40,4 @@ const AboutMe = () => {
     )
 }
 
-export default AboutMe;
+module.exports = AboutMe;

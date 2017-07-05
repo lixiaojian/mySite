@@ -1,33 +1,33 @@
 /**
  * Created by xiaojianli on 2017/4/20.
  */
-import React from 'react';
+const React = require('react');
 
-import '../../../vendor/tagcanvas/tagcanvas.min';
+require('../../../vendor/tagcanvas/tagcanvas.min');
 
-import '../styles/skillStack.less';
+require('../styles/skillStack.less');
 
-import jqueryLogo from '../images/skill-icon/jquery.png';
-import zeptoLogo from '../images/skill-icon/zepto.png';
-import angularLogo from '../images/skill-icon/angular.png';
-import requireLogo from '../images/skill-icon/requirejs.png';
-import gruntLogo from '../images/skill-icon/grunt-logo.png';
-import gulpLogo from '../images/skill-icon/gulp-logo.png';
-import webpackLogo from '../images/skill-icon/webpack.png';
-import vueLogo from '../images/skill-icon/vue.png';
-import reactLogo from  '../images/skill-icon/react.png';
-import bootstrapLogo from '../images/skill-icon/bootstrap.png';
-import nodejsLogo from '../images/skill-icon/nodejs.png';
-import html5Logo from '../images/skill-icon/html5.png';
-import css3Logo from '../images/skill-icon/css3.png';
-import photoshop from '../images/skill-icon/photoshop.png';
-import jsonLogo from '../images/skill-icon/json.png';
-import lessLogo from '../images/skill-icon/less.png';
-import webstormLogo from '../images/skill-icon/webstorm.png';
-import gitLogo from '../images/skill-icon/git.png';
-import svnLogo from '../images/skill-icon/svn.png';
+const jqueryLogo =require('../images/skill-icon/jquery.png');
+const zeptoLogo =require('../images/skill-icon/zepto.png');
+const angularLogo =require('../images/skill-icon/angular.png');
+const requireLogo =require('../images/skill-icon/requirejs.png');
+const gruntLogo =require('../images/skill-icon/grunt-logo.png');
+const gulpLogo =require('../images/skill-icon/gulp-logo.png');
+const webpackLogo =require('../images/skill-icon/webpack.png');
+const vueLogo =require('../images/skill-icon/vue.png');
+const reactLogo =require('../images/skill-icon/react.png');
+const bootstrapLogo =require('../images/skill-icon/bootstrap.png');
+const nodejsLogo =require('../images/skill-icon/nodejs.png');
+const html5Logo =require('../images/skill-icon/html5.png');
+const css3Logo =require('../images/skill-icon/css3.png');
+const photoshop =require('../images/skill-icon/photoshop.png');
+const jsonLogo =require('../images/skill-icon/json.png');
+const lessLogo =require('../images/skill-icon/less.png');
+const webstormLogo =require('../images/skill-icon/webstorm.png');
+const gitLogo =require('../images/skill-icon/git.png');
+const svnLogo =require('../images/skill-icon/svn.png');
 
-export default class SkillStack extends React.Component{
+class SkillStack extends React.Component{
     constructor(){
         super();
         this.state = {
@@ -105,3 +105,5 @@ export default class SkillStack extends React.Component{
         )
     }
 }
+
+module.exports = SkillStack;
