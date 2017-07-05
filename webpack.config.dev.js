@@ -24,14 +24,14 @@ module.exports = {
     context: path.join(__dirname),
     devtool:'cheap-module-eval-source-map',
     entry:{
-        resume1:[
-            './src/resume1/scripts/index.js',
-            hotMiddlewareScript
-        ],
-        resume2:[
-            './src/resume2/scripts/index.js',
-            hotMiddlewareScript
-        ],
+        // resume1:[
+        //     './src/resume1/scripts/index.js',
+        //     hotMiddlewareScript
+        // ],
+        // resume2:[
+        //     './src/resume2/scripts/index.js',
+        //     hotMiddlewareScript
+        // ],
         index:[
             './src/index/scripts/index.js',
             hotMiddlewareScript
