@@ -18,13 +18,13 @@ class WorkExperience extends React.Component {
         clientHeight:600,
         datas:[
             {isYear:true,year:'2011'},
-            {year:'2011',month:'07',day:'29',companyIcon:hongguanLogo,companyName:'上海鸿冠信息科技股份有限公司',jobName:'系统工程师',action:'入职'},
+            {year:'2011',month:'07',day:'29',companyIcon:hongguanLogo,companyName:'上海鸿冠信息科技股份有限公司',jobName:'系统工程师'},
             {isYear:true,year:'2012'},
-            {year:'2012',month:'03',day:'01',companyIcon:visionetLogo,companyName:'上海微企信息技术股份有限公司',jobName:'JAVA开发工程师',action:'入职'},
+            {year:'2012',month:'03',day:'01',companyIcon:visionetLogo,companyName:'上海微企信息技术股份有限公司',jobName:'JAVA开发工程师'},
             {isYear:true,year:'2014'},
-            {year:'2014',month:'09',day:'29',companyIcon:wensiLogo,companyName:'文思海辉技术有限公司',jobName:'WEB前端开发工程师',action:'入职'},
+            {year:'2014',month:'09',day:'29',companyIcon:wensiLogo,companyName:'文思海辉技术有限公司',jobName:'WEB前端开发工程师'},
             {isYear:true,year:'2015'},
-            {year:'2015',month:'07',day:'07',companyIcon:juliLogo,companyName:'上海聚力传媒技术有限公司',jobName:'WEB前端开发工程师',action:'入职'}
+            {year:'2015',month:'07',day:'07',companyIcon:juliLogo,companyName:'上海聚力传媒技术有限公司',jobName:'WEB前端开发工程师'}
         ]
       };
       this.changeDate.bind(this);
@@ -97,9 +97,6 @@ class WorkExperience extends React.Component {
                                         </div>
                                         <div className="job-name">
                                             <span className="key-label">工作职位：</span>{item.jobName}
-                                        </div>
-                                        <div className="company-name">
-                                            <span className="key-label">处理事件：</span>{item.action}
                                         </div>
                                         <div className="join-time">
                                             <span className="key-label">处理时间：</span>{item.year}年{item.month}月{item.day}日

@@ -19,6 +19,7 @@ module.exports = function(props) {
         <html>
         <head>
             <meta charSet="UTF-8"></meta>
+            <meta name="baidu-site-verification" content="1gvq2Llcn4" />
         </head>
         <body>
         <div id="app" dangerouslySetInnerHTML={

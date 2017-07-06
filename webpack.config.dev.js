@@ -160,7 +160,8 @@ module.exports =[
         },
         plugins:[
             new webpack.DefinePlugin({
-                'process.env.NODE_ENV':JSON.stringify('development')
+                'process.env.NODE_ENV':JSON.stringify('development'),
+                '_isServerDev_':true
             }),
             //遇到编译错误不停止服务
             new webpack.NoEmitOnErrorsPlugin(),

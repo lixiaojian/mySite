@@ -3,9 +3,14 @@
  */
 const React = require('react');
 
-if(process.env.NODE_ENV !== 'server'){
+try{
+    if(!_isServerDev_){
+        require('../../../vendor/tagcanvas/tagcanvas.min');
+    }
+}catch (e){
     require('../../../vendor/tagcanvas/tagcanvas.min');
 }
+
 
 
 require('../styles/skillStack.less');
@@ -58,9 +63,7 @@ class SkillStack extends React.Component{
         }
     }
     componentDidMount(){
-        console.log(111111);
         if(process.env.NODE_ENV !== 'server'){
-            console.log(222222);
             try {
                 TagCanvas.Start('skill_stack_canvas','skill_stack_icon_list',{
                     depth: 1,
