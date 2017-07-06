@@ -6,6 +6,8 @@ const express = require('express');
 const webpack = require('webpack');
 const config = require('./webpack.config.dev.js');
 
+var indexPage = require("./server/index.page.js").page;
+
 const app = express();
 const compiler = webpack(config);
 const webpackDevOptions = {
@@ -20,7 +22,9 @@ app.use(require('webpack-dev-middleware')(compiler,webpackDevOptions));
 app.use(require('webpack-hot-middleware')(compiler));
 
 app.get('/',function (req,res) {
-    res.sendFile(path.join(__dirname,'index.html'));
+    // res.sendFile(path.join(__dirname,'index.html'));
+    var html = indexPage();
+    res.end(html);
 });
 
 app.get('/resume/resume1.html',function (req,res) {

@@ -15,7 +15,7 @@
   },
   "license": "ISC",
   "scripts": {
-    "dev": "node server-local.js",
+    "dev": "webpack --config webpack.config.dev.js&&node server-local.js",
     "build": "webpack --config webpack.config.prod.js --progress --colors"
   },
   "author": "lixiaojian",
@@ -35,7 +35,7 @@
     "babel-preset-stage-0": "^6.24.1",
     "clean-webpack-plugin": "^0.1.16",
     "css-loader": "^0.28.0",
-    "extract-text-webpack-plugin": "^2.1.0",
+    "extract-text-webpack-plugin": "^2.1.2",
     "file-loader": "^0.11.1",
     "image-webpack-loader": "^3.3.0",
     "json-loader": "^0.5.4",

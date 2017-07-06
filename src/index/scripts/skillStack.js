@@ -3,7 +3,10 @@
  */
 const React = require('react');
 
-require('../../../vendor/tagcanvas/tagcanvas.min');
+if(process.env.NODE_ENV !== 'server'){
+    require('../../../vendor/tagcanvas/tagcanvas.min');
+}
+
 
 require('../styles/skillStack.less');
 
@@ -55,20 +58,24 @@ class SkillStack extends React.Component{
         }
     }
     componentDidMount(){
-        try {
-            TagCanvas.Start('skill_stack_canvas','skill_stack_icon_list',{
-                depth: 1,
-                maxSpeed: 0.1,
-                minSpeed:0.08,
-                freezeActive:true, //当有选中是停止运动
-                initial:0.8,
-                wheelZoom:false, //鼠标滚轮缩放
-                fadeIn:2000,
-                outlineColour:'transparent',
-                frontSelect:true
-            });
-            TagCanvas.SetSpeed('skill_stack_canvas', [0.1, 0.05]);
-        } catch(e) {}
+        console.log(111111);
+        if(process.env.NODE_ENV !== 'server'){
+            console.log(222222);
+            try {
+                TagCanvas.Start('skill_stack_canvas','skill_stack_icon_list',{
+                    depth: 1,
+                    maxSpeed: 0.1,
+                    minSpeed:0.08,
+                    freezeActive:true, //当有选中是停止运动
+                    initial:0.8,
+                    wheelZoom:false, //鼠标滚轮缩放
+                    fadeIn:2000,
+                    outlineColour:'transparent',
+                    frontSelect:true
+                });
+                TagCanvas.SetSpeed('skill_stack_canvas', [0.1, 0.05]);
+            } catch(e) {}
+        }
     }
     render(){
         return (
