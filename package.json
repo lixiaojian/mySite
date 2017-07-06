@@ -15,7 +15,8 @@
   },
   "license": "ISC",
   "scripts": {
-    "dev": "webpack --config webpack.config.dev.js&&node server-local.js",
+    "dev": "node server-local.js",
+    "serverRender":"webpack --config webpack.config.dev.js&&node server-local.js",
     "build": "webpack --config webpack.config.prod.js --progress --colors"
   },
   "author": "lixiaojian",

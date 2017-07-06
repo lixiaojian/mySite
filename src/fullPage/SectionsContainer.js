@@ -35,10 +35,8 @@ class SectionsContainer extends React.Component {
     }
 
     componentDidMount() {
-        console.log(333333);
         try{
-            console.log(window);
-            this.setState({windowHeight: window.innerHeight});
+            setTimeout(this._handleResize);
             this._childrenLength = this.props.children.length;
             window.addEventListener('resize', this._handleResize);
             if (!this.props.scrollBar) {
@@ -51,10 +49,7 @@ class SectionsContainer extends React.Component {
                     window.addEventListener('keydown', this._handleArrowKeys);
                 }
             }
-            this._handleResize();
-        }catch(e){
-            console.log(e);
-        }
+        }catch(e){}
     }
 
     _removeDefaultEventListeners() {
@@ -151,19 +146,16 @@ class SectionsContainer extends React.Component {
 
     _handleResize() {
         const position = 0 - (this.state.activeSection * window.innerHeight);
-
         this.setState({
             scrollingStarted: true,
             windowHeight: window.innerHeight,
             sectionScrolledPosition: position
         });
-
         this._resetScroll();
     }
 
     _handleSectionTransition(index) {
         const position = 0 - (index * this.state.windowHeight);
-
         if (!this.props.anchors.length || index === -1 || index >= this.props.anchors.length) {
             return false;
         }
@@ -194,7 +186,6 @@ class SectionsContainer extends React.Component {
     _handleAnchor() {
         const hash = window.location.hash.substring(1);
         const activeSection = this.props.anchors.indexOf(hash);
-
         if (this.state.activeSection !== activeSection) {
             this._handleSectionTransition(activeSection);
             this._addActiveClass();

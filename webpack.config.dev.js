@@ -31,9 +31,9 @@ module.exports =[
             ]
         },
         output:{
-            filename:'[name].js',
-            publicPath:'/build/js/',
-            path: __dirname + '/build/js/'
+            filename:'js/[name].js',
+            publicPath:'/build/',
+            path: __dirname + '/build/'
         },
         module:{
             rules:[
@@ -108,7 +108,7 @@ module.exports =[
         },
         output:{
             filename:'[name].page.js',
-            publicPath:'/server/',
+            // publicPath:'/server/',
             path: __dirname + '/server/',
             library: 'page',
             libraryTarget: 'commonjs'
@@ -146,7 +146,7 @@ module.exports =[
                 {
                     test: /\.(png|jpg)$/,
                     use: [
-                        {loader:'url-loader',options:{limit:8192,name:'images/[hash].[ext]'}}
+                        {loader:'url-loader',options:{limit:8192,name:'/build/images/[hash].[ext]'}}
                     ]
                 },
                 {
