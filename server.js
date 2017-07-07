@@ -6,8 +6,11 @@ const express = require('express');
 
 const app = express();
 
+var indexPage = require("./build/js/page/index.page.js").page;
+
 app.get('/',function (req,res) {
-    res.sendFile(path.join(__dirname,'index.html'));
+    var html = indexPage();
+    res.end(html);
 });
 
 app.get('/resume/resume1.html',function (req,res) {
@@ -17,9 +20,12 @@ app.get('/resume/resume2.html',function (req,res) {
     res.sendFile(path.join(__dirname,'/resume/resume2.html'));
 });
 
-app.get('/*.*',function (req,res) {
-    res.sendFile(path.join(__dirname,req.url));
-});
+// app.get('/*.*',function (req,res) {
+//     res.sendFile(path.join(__dirname,req.url));
+// });
+
+//配置静态文件的访问
+app.use('/build', express.static(path.join(__dirname, 'build')));
 
 app.listen(80,'0.0.0.0',function (err) {
     if(err){

@@ -6,7 +6,7 @@ const express = require('express');
 const webpack = require('webpack');
 const config = require('./webpack.config.dev.js');
 
-var indexPage = require("./server/index.page.js").page;
+var indexPage = require("./build/js/page/index.page.js").page;
 
 const app = express();
 const compiler = webpack(config);

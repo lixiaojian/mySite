@@ -107,9 +107,9 @@ module.exports =[
             ]
         },
         output:{
-            filename:'[name].page.js',
-            // publicPath:'/server/',
-            path: __dirname + '/server/',
+            filename:'js/page/[name].page.js',
+            publicPath:'/build/',
+            path: __dirname + '/build/',
             library: 'page',
             libraryTarget: 'commonjs'
         },
