@@ -30,9 +30,9 @@ module.exports = function(props) {
             <meta charSet="UTF-8"></meta>
             <meta httpEquiv="X-UA-Compatible" content="edge"/>
             <meta name="baidu-site-verification" content="1gvq2Llcn4" />
-            <meta content="李晓健个人主页，李晓健WEB前端开发工程师简历，前端开发" name="description" />
-            <meta content="web前端，F2E，web前端个人简历，前端开发，李晓健,工程师,WEB前端,H5开发,简历,工作经验,WEB前端开发工程师" name="keywords" />
-            <title>李晓健个人主页</title>
+            <meta content="李晓健个人主页，WEB前端开发工程师简历，前端开发，工程师简历，擅长web前端开发，主要包括html，css，javascript，nodejs" name="description" />
+            <meta content="web前端，F2E，web前端个人简历，前端开发，李晓健，工程师，WEB前端，H5开发，简历，工作经验，WEB前端开发工程师，js，javascript，html，h5" name="keywords" />
+            <title>前端工程师</title>
             <link href="/favicon.ico" rel="icon" type="image/x-icon" />
             <link rel="stylesheet" href={"/build/css/index.css?v=" + timeStemp} />
             <script dangerouslySetInnerHTML={
