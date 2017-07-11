@@ -1,4 +1,4 @@
 {
   "presets": ["es2015","stage-0","react"],
-  "plugins": [["import", {"libraryName": "antd","style": true}]]
+  "plugins": [["import", {"libraryName": "antd","style": true}],["import", { "style": true, "libraryName": "antd-mobile" }]]
 }

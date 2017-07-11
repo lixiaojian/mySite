@@ -14,7 +14,7 @@ var pcIndexPage = indexPage();
 
 app.get('/',function (req,res) {
     if(isMobile(req.headers['user-agent']).any){
-        res.end('手机页面正在开发中');
+        res.sendFile(path.join(__dirname,'/mobileIndex.html'));
     }else{
         res.end(pcIndexPage);
     }

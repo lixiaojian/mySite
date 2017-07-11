@@ -35,6 +35,10 @@ module.exports = {
         index:[
             './src/pc/index/scripts/index.js',
             hotMiddlewareScript
+        ],
+        mIndex:[
+            './src/mobile/index/scripts/index.js',
+            hotMiddlewareScript
         ]
     },
     output:{
