@@ -4,7 +4,7 @@
 import React from 'react';
 import { Progress } from 'antd';
 import ModuleTitle from '../components/ModuleTitle';
-import skill from '../../../../mockData/programmingLanguage.json';
+import skill from '../../../../../mockData/programmingLanguage.json';
 import '../../styles/mySkill.less';
 
 export default class MySkill extends React.Component{

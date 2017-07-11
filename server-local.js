@@ -6,14 +6,14 @@ const express = require('express');
 const webpack = require('webpack');
 const config = require('./webpack.config.dev.js');
 
-var indexPage = require("./build/js/page/index.page.js").page;
+var isMobile = require('ismobilejs');
 
 const app = express();
 const compiler = webpack(config);
 const webpackDevOptions = {
     noInfo:true,
     historyApiFallback:true,
-    publicPath:config[0].output.publicPath,
+    publicPath:config.output.publicPath,
     headers:{
         'Access-Control-Allow-Origin':'*'
     }
@@ -22,9 +22,11 @@ app.use(require('webpack-dev-middleware')(compiler,webpackDevOptions));
 app.use(require('webpack-hot-middleware')(compiler));
 
 app.get('/',function (req,res) {
-    // res.sendFile(path.join(__dirname,'index.html'));
-    var html = indexPage();
-    res.end(html);
+    if(isMobile(req.headers['user-agent']).any){
+        res.end('手机页面正在开发中');
+    }else{
+        res.sendFile(path.join(__dirname,'index.html'));
+    }
 });
 
 app.get('/resume/resume1.html',function (req,res) {

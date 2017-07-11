@@ -2,8 +2,8 @@
  * Created by 872458899@qq.com on 2017/4/12.
  */
 import React from "react";
-import headerMsg from '../../../../mockData/userHeaderMsg.json';
-import headerImg from '../../../common/images/user-header-img.png';
+import headerMsg from '../../../../../mockData/userHeaderMsg.json';
+import headerImg from '../../../../common/images/user-header-img.png';
 import '../../styles/userHeader.less';
 
 export default class UserHeader extends React.Component{

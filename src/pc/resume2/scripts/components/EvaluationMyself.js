@@ -2,7 +2,7 @@
  * Created by xiaojianli on 2017/4/27.
  */
 import React from 'react';
-import evaluations from '../../../../mockData/evaluation.json';
+import evaluations from '../../../../../mockData/evaluation.json';
 import ModuleTitle from '../components/ModuleTitle';
 import '../../styles/evaluationMyself.less';
 

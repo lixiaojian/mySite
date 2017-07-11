@@ -4,13 +4,20 @@
 const path = require('path');
 const express = require('express');
 
+var isMobile = require('ismobilejs');
+
 const app = express();
 
 var indexPage = require("./build/js/page/index.page.js").page;
 
+var pcIndexPage = indexPage();
+
 app.get('/',function (req,res) {
-    var html = indexPage();
-    res.end(html);
+    if(isMobile(req.headers['user-agent']).any){
+        res.end('手机页面正在开发中');
+    }else{
+        res.end(pcIndexPage);
+    }
 });
 
 app.get('/resume/resume1.html',function (req,res) {

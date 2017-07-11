@@ -30,13 +30,13 @@ module.exports = [{
     context: path.join(__dirname),
     entry:{
         resume1:[
-            './src/resume1/scripts/index.js'
+            './src/pc/resume1/scripts/index.js'
         ],
         resume2:[
-            './src/resume2/scripts/index.js'
+            './src/pc/resume2/scripts/index.js'
         ],
         index:[
-            './src/index/scripts/index.js'
+            './src/pc/index/scripts/index.js'
         ]
     },
     output: {

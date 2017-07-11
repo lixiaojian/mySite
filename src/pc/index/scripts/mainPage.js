@@ -9,16 +9,16 @@ const SkillStack = require('./skillStack');
 const resume1 = require('../images/resume/resume1.png');
 const resume2 = require('../images/resume/resume2.png');
 
-const Header = require('../../fullPage/Header')
-const Footer = require('../../fullPage/Footer')
-const Section = require('../../fullPage/Section')
-const SectionsContainer = require('../../fullPage/SectionsContainer')
+const Header = require('../../../fullPage/Header')
+const Footer = require('../../../fullPage/Footer')
+const Section = require('../../../fullPage/Section')
+const SectionsContainer = require('../../../fullPage/SectionsContainer')
 
 const WorkExperience = require('./workExperience');
 
-require('../../common/styles/reset.less');
+require('../../../common/styles/reset.less');
 require('../styles/index.less');
-require('../../../font/style.css');
+require('../../../../font/style.css');
 
 
 class MainPage extends React.Component{

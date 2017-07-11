@@ -21471,7 +21471,7 @@ var React = __webpack_require__(9);
 
 try {
     if (false) {
-        require('../../../vendor/tagcanvas/tagcanvas.min');
+        require('../../../../vendor/tagcanvas/tagcanvas.min');
     }
 } catch (e) {
     __webpack_require__(179);
@@ -21916,8 +21916,6 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 var React = __webpack_require__(9);
 
-var window = window || {};
-
 var Section = function (_React$Component) {
     _inherits(Section, _React$Component);
 
@@ -21926,9 +21924,12 @@ var Section = function (_React$Component) {
 
         var _this = _possibleConstructorReturn(this, (Section.__proto__ || Object.getPrototypeOf(Section)).call(this));
 
-        _this.state = {
-            windowHeight: window.innerHeight
-        };
+        _this.state = {};
+        try {
+            _this.state = {
+                windowHeight: window.innerHeight
+            };
+        } catch (e) {}
         return _this;
     }
 
@@ -21977,7 +21978,6 @@ var Section = function (_React$Component) {
                 paddingTop: this.context.sectionPaddingTop,
                 paddingBottom: this.context.sectionPaddingBottom
             };
-
             return React.createElement(
                 'div',
                 { className: this.context.sectionClassName + (this.props.className ? ' ' + this.props.className : ''),

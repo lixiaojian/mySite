@@ -5,9 +5,9 @@ import React from 'react';
 import ModuleTitle from '../components/ModuleTitle';
 import '../../styles/aboutMe.less';
 
-import baseMsg from '../../../../mockData/baseMsg.json';
-import indeividual from '../../../../mockData/individualResume.json';
-import userHeader from '../../../common/images/user-header-img.png';
+import baseMsg from '../../../../../mockData/baseMsg.json';
+import indeividual from '../../../../../mockData/individualResume.json';
+import userHeader from '../../../../common/images/user-header-img.png';
 
 export default class AboutMe extends React.Component{
     constructor(){

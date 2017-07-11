@@ -1,13 +1,14 @@
 const React = require('react');
 
-const window = window || {}
-
 class Section extends React.Component {
     constructor() {
         super();
-        this.state = {
-            windowHeight: window.innerHeight
-        };
+        this.state = {};
+        try{
+            this.state = {
+                windowHeight: window.innerHeight
+            };
+        }catch (e){}
     }
 
     handleResize() {
@@ -43,7 +44,6 @@ class Section extends React.Component {
             paddingTop: this.context.sectionPaddingTop,
             paddingBottom: this.context.sectionPaddingBottom,
         };
-
         return (
             <div className={this.context.sectionClassName + (this.props.className ? ` ${this.props.className}` : '')}
                  id={this.props.id} style={sectionStyle}>

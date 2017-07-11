@@ -4,7 +4,7 @@
 import React from 'react';
 import {Icon } from 'antd';
 import ModuleTitle from '../components/ModuleTitle';
-import contacts from '../../../../mockData/contactWay.json';
+import contacts from '../../../../../mockData/contactWay.json';
 import '../../styles/contactMe.less';
 
 export default class ContactMe extends React.Component{

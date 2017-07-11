@@ -5,10 +5,10 @@ const React = require('react');
 
 try{
     if(!_isServerDev_){
-        require('../../../vendor/tagcanvas/tagcanvas.min');
+        require('../../../../vendor/tagcanvas/tagcanvas.min');
     }
 }catch (e){
-    require('../../../vendor/tagcanvas/tagcanvas.min');
+    require('../../../../vendor/tagcanvas/tagcanvas.min');
 }
 
 

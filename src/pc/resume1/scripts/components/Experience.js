@@ -7,12 +7,12 @@ import React from 'react';
 import { Card,Tag,Icon } from 'antd';
 import '../../styles/experience.less';
 
-import indeividual from '../../../../mockData/individualResume.json';
-import skills from '../../../../mockData/skills.json';
-import workExp from '../../../../mockData/wordExperience.json';
-import eduExp from '../../../../mockData/educationExperience.json';
-import projectExp from '../../../../mockData/projectExperience.json';
-import evaluations from '../../../../mockData/evaluation.json';
+import indeividual from '../../../../../mockData/individualResume.json';
+import skills from '../../../../../mockData/skills.json';
+import workExp from '../../../../../mockData/wordExperience.json';
+import eduExp from '../../../../../mockData/educationExperience.json';
+import projectExp from '../../../../../mockData/projectExperience.json';
+import evaluations from '../../../../../mockData/evaluation.json';
 
 class ContentTitle extends React.Component{
     render(){

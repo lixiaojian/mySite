@@ -3,11 +3,11 @@
  */
 import React from "react";
 import ReactDOM from "react-dom";
-import '../../common/styles/reset.less';
+import '../../../common/styles/reset.less';
 import '../styles/index.less';
-import workExp from '../../../mockData/wordExperience.json';
-import eduExp from '../../../mockData/educationExperience.json';
-import proExp from '../../../mockData/projectExperience.json';
+import workExp from '../../../../mockData/wordExperience.json';
+import eduExp from '../../../../mockData/educationExperience.json';
+import proExp from '../../../../mockData/projectExperience.json';
 
 import UserHeader from './components/UserHeader';
 import AboutMe from './components/AboutMe';

@@ -4,7 +4,7 @@
 var React = require('react');
 var ReactDOMServer = require("react-dom/server");
 
-var MainPage = require('../src/index/scripts/mainPage');
+var MainPage = require('../src/pc/index/scripts/mainPage');
 
 var ReactDOM = require('react-dom');
 

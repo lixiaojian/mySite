@@ -2,7 +2,7 @@
  * Created by xiaojianli on 2017/4/25.
  */
 import React from "react";
-import headerMsg from '../../../../mockData/userHeaderMsg.json';
+import headerMsg from '../../../../../mockData/userHeaderMsg.json';
 
 import '../../styles/pageTitle.less';
 

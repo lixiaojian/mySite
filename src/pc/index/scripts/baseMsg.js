@@ -2,7 +2,7 @@
  * Created by xiaojianli on 2017/4/20.
  */
 const React = require('react');
-const userHeaderImg = require('../../common/images/user-header-img.png');
+const userHeaderImg = require('../../../common/images/user-header-img.png');
 require('../styles/baseMsg.less');
 
 const BaseMsg = () =>{

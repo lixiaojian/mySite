@@ -3,9 +3,9 @@
  */
 import React from 'react';
 import { Progress } from 'antd';
-import baseMsg from '../../../../mockData/baseMsg.json';
-import contact from '../../../../mockData/contactWay.json';
-import language from '../../../../mockData/programmingLanguage.json';
+import baseMsg from '../../../../../mockData/baseMsg.json';
+import contact from '../../../../../mockData/contactWay.json';
+import language from '../../../../../mockData/programmingLanguage.json';
 import '../../styles/baseMsg.less';
 
 export default class BaseMsg extends React.Component{
