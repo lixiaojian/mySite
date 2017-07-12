@@ -102,7 +102,7 @@ module.exports = [{
             },
             {
                 test: /\.(jpe?g|png)$/i,
-                loaders: ['url-loader?limit=8192&name=images/[hash].[ext]',{
+                loaders: ['url-loader?limit=4096&name=images/[hash].[ext]',{
                         loader: 'image-webpack-loader',
                         query: {
                             mozjpeg: {
@@ -186,7 +186,7 @@ module.exports = [{
             },
             {
                 test: /\.(jpe?g|png)$/i,
-                loaders: ['url-loader?limit=8192&name=images/[hash].[ext]',{
+                loaders: ['url-loader?limit=4096&name=images/[hash].[ext]',{
                     loader: 'image-webpack-loader',
                     query: {
                         mozjpeg: {
