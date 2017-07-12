@@ -51,7 +51,20 @@ class SectionsContainer extends React.Component {
             }
         }catch(e){}
     }
-
+    componentWillReceiveProps(props){
+        const moveTo = props.moveTo;
+        if(moveTo){
+            let activeSection = this.state.activeSection;
+            if(moveTo === 'pre' && activeSection>0){
+                activeSection--;
+            }else if(moveTo === 'next' && this._childrenLength > activeSection){
+                activeSection++;
+            }
+            this._setAnchor(activeSection);
+            this._handleSectionTransition(activeSection);
+            this._addActiveClass();
+        }
+    }
     _removeDefaultEventListeners() {
         try{
             window.removeEventListener('resize', this._handleResize);
