@@ -16,12 +16,24 @@ const loaddingScript = `document.onreadystatechange = function (){
     }
 }`;
 
+const baiduPush = `(function(){
+                        var bp = document.createElement('script');
+                        var curProtocol = window.location.protocol.split(':')[0];
+                        if (curProtocol === 'https'){
+                            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+                        }else{
+                            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+                        }
+                        var s = document.getElementsByTagName("script")[0];
+                        s.parentNode.insertBefore(bp, s);
+                    })();`
+
 const loaddingStyle='.page-loadding{position: fixed;top: 0;bottom: 0;left: 0;right: 0;background-color: #fff;z-index: 100;}'
 
 module.exports = function(props) {
 
     var content = ReactDOMServer.renderToString(
-        <MainPage isServer={true}/>
+        <MainPage />
     );
 
     var html = ReactDOMServer.renderToStaticMarkup(
@@ -35,12 +47,8 @@ module.exports = function(props) {
             <title>前端工程师</title>
             <link href="/favicon.ico" rel="icon" type="image/x-icon" />
             <link rel="stylesheet" href={"/build/css/index.css?v=" + timeStemp} />
-            <script dangerouslySetInnerHTML={
-                {__html: loaddingScript}
-            }></script>
-            <style dangerouslySetInnerHTML={
-                {__html:loaddingStyle}
-            }></style>
+            <script dangerouslySetInnerHTML={{__html: loaddingScript}}></script>
+            <style dangerouslySetInnerHTML={{__html:loaddingStyle}}></style>
         </head>
         <body>
         <div id="page_loadding" className="page-loadding">
@@ -57,9 +65,9 @@ module.exports = function(props) {
         } />
         <script src={"/build/js/vendor.js?v="+ timeStemp}></script>
         <script src={"/build/js/index.js?v=" + timeStemp}></script>
+        <script dangerouslySetInnerHTML = {{__html:baiduPush}}></script>
         </body>
         </html>
     );
-
     return html;
 }

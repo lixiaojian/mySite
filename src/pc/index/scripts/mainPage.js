@@ -1,13 +1,16 @@
 /**
  * Created by xiaojianli on 2017/7/5.
  */
-const React=require('react');
+// const React=require('react');
+
+import React from 'react'
 
 const BaseMsg = require('./baseMsg')
 const AboutMe = require('./aboutMe');
 const SkillStack = require('./skillStack');
 const resume1 = require('../images/resume/resume1.png');
 const resume2 = require('../images/resume/resume2.png');
+const userLogo = require('../../../common/images/user-logo.png');
 
 const Header = require('../../../fullPage/Header')
 const Footer = require('../../../fullPage/Footer')
@@ -62,6 +65,7 @@ class MainPage extends React.Component{
     render(){
         return(
             <div className="index-page">
+                <img className="logo" src={userLogo} style={{width:'121px',height:'75px',position:'absolute',zIndex:-100,opacity:0}} alt="前端工程师"/>
                 <Header className="nav-menu">
                     <a href="#index">首页</a>
                     <a href="#aboutme">我的简介</a>
