@@ -60,7 +60,7 @@ module.exports = [{
         //把通过npm包引用的第三方类库从入口文件中提取出来
         new webpack.optimize.CommonsChunkPlugin({
             name: 'vendor',
-            minChunks: 3
+            minChunks: 4
         }),
         new webpack.optimize.UglifyJsPlugin({//混合代码插件
             compressor: {
