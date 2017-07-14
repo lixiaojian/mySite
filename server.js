@@ -27,10 +27,6 @@ app.get('/resume/resume2.html',function (req,res) {
     res.sendFile(path.join(__dirname,'/resume/resume2.html'));
 });
 
-// app.get('/*.*',function (req,res) {
-//     res.sendFile(path.join(__dirname,req.url));
-// });
-
 //配置静态文件的访问
 app.use('/build', express.static(path.join(__dirname, 'build')));
 

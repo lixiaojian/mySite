@@ -78,14 +78,14 @@ class MainPage extends React.Component{
                     <div className="section">
                         <div className="section-item">
                             <div className="table-cell">
-                                44444
+                                开发中
                             </div>
                         </div>
                     </div>
                     <div className="section">
                         <div className="section-item">
                             <div className="table-cell">
-                                55555
+                                开发中
                             </div>
                         </div>
                     </div>

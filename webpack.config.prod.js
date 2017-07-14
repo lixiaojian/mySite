@@ -37,6 +37,9 @@ module.exports = [{
         ],
         index:[
             './src/pc/index/scripts/index.js'
+        ],
+        mIndex:[
+            './src/mobile/index/scripts/index.js'
         ]
     },
     output: {
