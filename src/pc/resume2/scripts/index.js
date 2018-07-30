@@ -8,13 +8,16 @@ import '../styles/index.less';
 import workExp from '../../../../mockData/wordExperience.json';
 import eduExp from '../../../../mockData/educationExperience.json';
 import proExp from '../../../../mockData/projectExperience.json';
+import skills from '../../../../mockData/skills.json';
 
 import UserHeader from './components/UserHeader';
 import AboutMe from './components/AboutMe';
-import MySkill from './components/MySkill';
+import ProgramLanguage from './components/ProgramLanguage';
 import WorkExperience from './components/WorkExperience';
 import EvaluationMyself from './components/EvaluationMyself'
 import ContactMe from './components/ContactMe';
+import Skill from './components/Skill'
+
 class MainPage extends React.Component{
     render(){
         return(
@@ -22,7 +25,8 @@ class MainPage extends React.Component{
                 <a className="download-link" target="_blank" href="/fileDownload/lxj2.pdf">简历导出</a>
                 <UserHeader />
                 <AboutMe />
-                <MySkill />
+                <ProgramLanguage />
+                <Skill skills={skills.datas}/>
                 <WorkExperience exp={workExp} title="工作经历" cid="work_experience"/>
                 <WorkExperience exp={eduExp} title="教育经历" cid="edu_experience"/>
                 <WorkExperience exp={proExp} title="项目经历" cid="project_experience"/>

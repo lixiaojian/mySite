@@ -13,6 +13,7 @@ import workExp from '../../../../../mockData/wordExperience.json';
 import eduExp from '../../../../../mockData/educationExperience.json';
 import projectExp from '../../../../../mockData/projectExperience.json';
 import evaluations from '../../../../../mockData/evaluation.json';
+import SkillsComponent from "../../../common/skills/SkillsComponent";
 
 class ContentTitle extends React.Component{
     render(){
@@ -34,6 +35,7 @@ export default class Experience extends React.Component{
         this.setState({datas:[indeividual,skills,workExp,eduExp,projectExp,evaluations]});
     };
     render(){
+        const workYears = new Date().getFullYear() - 2011;
         return (
             <div className="experience-warpper">
                 {this.state.datas.map((item,index)=>(
@@ -52,20 +54,13 @@ export default class Experience extends React.Component{
                                 </div>
                             ))
                         :(item.isTag?
-                                (<div className="skill-box">
-                                    <div className="skill-desc">技能标识：<Tag color={this.state.skillColr[0]}>了解</Tag><Tag color={this.state.skillColr[1]}>掌握</Tag><Tag color={this.state.skillColr[2]}>熟练</Tag><Tag color={this.state.skillColr[3]}>精通</Tag></div>
-                                    <div>
-                                        {item.datas.map((sitem,sindex) =>
-                                            <Tag key={'3333'+sindex} color={this.state.skillColr[sitem.degree]}>{sitem.skillName}</Tag>
-                                        )}
-                                    </div>
-                                </div>)
-                                    :(item.isList?(<ul className="list-box">
-                                        {item.datas.map((litem,lindex) =>
-                                            <li className="list-item" key={'4444'+lindex}>{litem}</li>
-                                        )}
-                                    </ul>):<p>{item.content}</p>)
+                            <SkillsComponent skills = {item.datas}/>
+                            :(item.isList?(<ul className="list-box">
+                                {item.datas.map((litem,lindex) =>
+                                    <li className="list-item" key={'4444'+lindex}>{litem}</li>
                                 )}
+                            </ul>):<p>{item.content.replace('$work_years',workYears)}</p>)
+                        )}
                     </Card>
                 ))}
             </div>

@@ -17,6 +17,7 @@ export default class AboutMe extends React.Component{
         }
     }
     render(){
+        const workYears = new Date().getFullYear() - 2011;
         return(
             <div className="modeule-box about-me-warpper" id="about_me">
                 <ModuleTitle title="关于我"/>
@@ -41,7 +42,7 @@ export default class AboutMe extends React.Component{
                             </span>
                             <div className="my-motto">
                                 <p>
-                                    {indeividual.content}
+                                    {indeividual.content.replace('$work_years',workYears)}
                                 </p>
                             </div>
                         </div>

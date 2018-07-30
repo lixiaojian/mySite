@@ -1,6 +1,43 @@
 @media print {
+  body{
+    font-size: 20px !important;
+  }
   #app{
     width: 1190px;
+
+    .msg-label{
+      width: 100px;
+    }
+    .ant-tag{
+      font-size: 17px;
+    }
+    .base-msg-title,.ant-card-head-title{
+      font-size: 32px;
+    }
+    .base-msg-detail,.exp-job-title{
+      font-size: 18px;
+    }
+    .exp-date,.exp-org-name,.ant-card-body{
+      font-size: 21px;
+    }
+    .user-name{
+      font-size: 56px;
+    }
+    .job-name{
+      font-size: 25px;
+    }
+    .experience-box{
+      padding: 12px 0;
+    }
+    .ant-layout-content .ant-card{
+      margin-bottom: 14px;
+      &:last-child{
+        margin-bottom: 0;
+        .ant-card-body{
+          padding-bottom: 0;
+        }
+      }
+    }
   }
   .download-link{
     display: none!important;
