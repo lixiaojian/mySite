@@ -34,6 +34,7 @@ const lessLogo =require('../images/skill-icon/less.png');
 const webstormLogo =require('../images/skill-icon/webstorm.png');
 const gitLogo =require('../images/skill-icon/git.png');
 const svnLogo =require('../images/skill-icon/svn.png');
+const electronLogo = require('../images/skill-icon/electron.png');
 
 class SkillStack extends React.Component{
     constructor(){
@@ -58,7 +59,8 @@ class SkillStack extends React.Component{
                 {name:'LESS',link:'http://lesscss.cn/',img:lessLogo},
                 {name:'webstorm',link:'http://www.jetbrains.com/webstorm/',img:webstormLogo},
                 {name:'GIT',link:'https://git-scm.com/',img:gitLogo},
-                {name:'SVN',link:'https://tortoisesvn.net/',img:svnLogo}
+                {name:'SVN',link:'https://tortoisesvn.net/',img:svnLogo},
+                {name:'Electron',link:'https://electronjs.org/',img:electronLogo}
             ]
         }
     }
@@ -74,7 +76,10 @@ class SkillStack extends React.Component{
                     wheelZoom:false, //鼠标滚轮缩放
                     fadeIn:2000,
                     outlineColour:'transparent',
-                    frontSelect:true
+                    frontSelect:true,
+                    imageMode:'both',
+                    imagePosition:'top',
+                    textColour:'#333'
                 });
                 TagCanvas.SetSpeed('skill_stack_canvas', [0.1, 0.05]);
             } catch(e) {}
@@ -104,7 +109,7 @@ class SkillStack extends React.Component{
                             <div id="skill_stack_icon_list">
                                 <ul>
                                     {this.state.skills.map((item,index) =>
-                                        <li key={'skills_'+index}><a href={item.link} target="_blank"><img src={item.img} alt={item.name} /></a></li>
+                                        <li key={'skills_'+index}><a href={item.link} target="_blank"><img src={item.img} alt={item.name} /><span>{item.name}</span></a></li>
                                     )}
                                 </ul>
                             </div>

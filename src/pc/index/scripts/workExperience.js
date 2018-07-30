@@ -20,7 +20,7 @@ class WorkExperience extends React.Component {
             {isYear:true,year:'2011'},
             {year:'2011',month:'07',day:'29',companyIcon:hongguanLogo,companyName:'上海鸿冠信息科技股份有限公司',jobName:'系统工程师'},
             {isYear:true,year:'2012'},
-            {year:'2012',month:'03',day:'01',companyIcon:visionetLogo,companyName:'上海微企信息技术股份有限公司',jobName:'JAVA开发工程师'},
+            {year:'2012',month:'03',day:'01',companyIcon:visionetLogo,companyName:'上海微企信息技术股份有限公司',jobName:'软件开发工程师'},
             {isYear:true,year:'2014'},
             {year:'2014',month:'09',day:'29',companyIcon:wensiLogo,companyName:'文思海辉技术有限公司',jobName:'WEB前端开发工程师'},
             {isYear:true,year:'2015'},
@@ -87,7 +87,7 @@ class WorkExperience extends React.Component {
                             :(
                                 <div key={index} className={`timeList_item step ${this.state.currIndex === index?'avtive':''}`}>
                                     <div onClick={() => this.changeDate(index)} className="circle">{item.month}/{item.day}</div>
-                                    <h2 className="timeList_item_title">{item.action} : {item.companyName}</h2>
+                                    <h2 className="timeList_item_title">{item.companyName}</h2>
                                     <div className="list_show" style={{top:`-${(this.state.clientHeight - 230 -200)/2 +200}px`}}>
                                         <div className="company-logo-box">
                                             <img src={item.companyIcon} className="company-logo"/>
@@ -99,7 +99,7 @@ class WorkExperience extends React.Component {
                                             <span className="key-label">工作职位：</span>{item.jobName}
                                         </div>
                                         <div className="join-time">
-                                            <span className="key-label">处理时间：</span>{item.year}年{item.month}月{item.day}日
+                                            <span className="key-label">入职时间：</span>{item.year}年{item.month}月{item.day}日
                                         </div>
                                     </div>
                                 </div>
