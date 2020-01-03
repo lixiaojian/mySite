@@ -72,7 +72,7 @@ class MainPage extends React.Component{
                 </Header>
                 <Footer>
                     <p className="copyright">
-                        © 2017 lixj.vip 版权所有 | 沪ICP备17028336号
+                        © 2020 lixj.vip 版权所有 | <a href="http://www.beian.miit.gov.cn/">沪ICP备17028336号</a>
                     </p>
                 </Footer>
                 <SectionsContainer {...this.state}>
