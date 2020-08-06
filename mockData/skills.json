@@ -5,7 +5,7 @@
   "datas":[
     {"skillName":"jQuery","degree":2},
     {"skillName":"zepto","degree":2},
-    {"skillName":"AngularJS","degree":1},
+    {"skillName":"AngularJS","degree":0},
     {"skillName":"avalon","degree":1},
     {"skillName":"requireJs","degree":1},
     {"skillName":"grunt","degree":0},
@@ -19,6 +19,7 @@
     {"skillName":"html5","degree":2},
     {"skillName":"css3","degree":2},
     {"skillName":"ES6","degree":2},
+    {"skillName":"WebRTC","degree":1},
     {"skillName":"浏览器的调试工具","degree":2},
     {"skillName":"photoshop","degree":1}
   ]

@@ -2,8 +2,10 @@
     {"label":"生日","value":"1987年2月4日"},
     {"label":"贯籍","value":"河南"},
     {"label":"现居","value":"上海浦东"},
-    {"label":"学历","value":"大专"},
+    {"label":"学历1","value":"全日制大专"},
     {"label":"专业","value":"软件技术"},
     {"label":"毕业学校","value":"郑州大学"},
-    {"label":"个人网站","value":"http://www.xiaojianli.cn","isLink":true}
+    {"label":"学历2","value":"自考本科"},
+    {"label":"专业","value":"视觉传达与设计"},
+    {"label":"毕业学校","value":"重庆工程学院"}
 ]}
