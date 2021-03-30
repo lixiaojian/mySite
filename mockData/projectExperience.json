@@ -3,10 +3,11 @@
   "title":"项目经验",
   "hasLabel":true,
   "datas":[
-    {"date":"2018-10 至 现在","jobTitle":"《聚议堂》","link":"https://juyitangprexg.suning.com/","workDesc":"聚议堂是使用WebRTC技术开发的一套在线会议系统，该系统支持多人加入同一个会议，多人同时发言，可以显示所有人的视频，一个房间支持一个用户共享桌面，会议中的人员可对任意视频流进行操作（开启/关闭画面、开启关闭声音），该操作只对自己端有效，不会影响同一房间其他用户，可以查看各个流的质量数据。使用的工具及技术：webstorm、git、reactJS、webrtc"},
-    {"date":"2015-07 至 现在","jobTitle":"《聚力云》","link":"http://www.pptvyun.com","workDesc":"聚力云融合云计算、P2P技术、海量存储、安全策略构建了一套专注视频领域服务的SaaS平台。我在该项目的主责任是对官网进行开发、文档的维护以及用户控制台前面页面的开发。使用的工具及技术：webstorm、git、reactJS、echarts3"},
+    {"date":"2018-10 至 现在","jobTitle":"《聚议堂PC客户端》","workDesc":"聚议堂的PC客户，主要用于PC桌面的音视频会议，整体功能基本同WEB端的聚议堂,使用技术：electron。该项目的完全由我一个人开发完成。"},
+    {"date":"2018-10 至 现在","jobTitle":"《聚议堂》","workDesc":"聚议堂是使用WebRTC技术开发的一套在线会议系统，该系统支持多人加入同一个会议，多人同时发言，可以显示所有人的视频，一个房间支持一个用户共享桌面，会议中的人员可对任意视频流进行操作（开启/关闭画面、开启关闭声音），可以查看各个流的质量数据、H5SDK的输出。使用的工具及技术：webstorm、git、reactJS、webrtc,该项目的前端完全由我一个人开发。"},
+    {"date":"2015-07 至 现在","jobTitle":"《聚力云》","link":"http://www.pptvyun.com","workDesc":"聚力云融合云计算、P2P技术、海量存储、安全策略构建了一套专注视频领域服务的SaaS平台。我在该项目的主责任是对前端使用的技术选型和框架搭建，官网进行开发、文档的维护以及用户控制台前面页面的开发。使用的工具及技术：webstorm、git、reactJS、echarts3"},
     {"date":"2014-02 至 2014-09","jobTitle":"《微上客》","link":"http://www.visionet.com.cn/117/product.html","workDesc":"微上客是一款实时在线的全渠道智能客服平台，它将原有的各种分散的多种企业客服沟通渠道如微信、微博、邮件、易信、Webchat等整合起来。我在该项目中的主要是做对公众帐号微信的收发、易信的收发、及前台的所有开发功能。使用的工具及技术：webstorm、tomcat、mysql、eclipse、git、hibernate、springMVC、jquery、angular"},
     {"date":"2011-03 至 2014-09","jobTitle":"《知新》","link":"http://www.visionet.com.cn/111/product.html","workDesc":"知新是新一代企业内部社交平台，提供完备的各种沟通、交流、协作的模式和工具，以适应企业内部信息交互的不同场景的需求。主要和组内几个开发人员一起开发各自的模块。我负责的是群组相关模块的开发。使用的工具及技术：eclipse、tomcat、mysql、svn、springMVC、hibernate、seaJS、jquery、angular"},
-    {"date":"2015-07 至 现在","jobTitle":"《其他》","link":"javascript","workDesc":"1、视频上传SDK，支持分段上传（javascript）。 2、电话会议桥接系统，将电话接入到webrtc系统中（nodeJS，webrtc）。 3、聚议堂PC客户端，聚议堂的windows客户端安装程序（electron）"}
+    {"date":"2015-07 至 现在","jobTitle":"《其他》","link":"javascript","workDesc":"1、视频上传SDK，支持分段上传（javascript）。 2、电话会议桥接系统，将电话接入到webrtc系统中（nodeJS，webrtc）。 3、基于Intel的开源项目OWT server来实现和替换苏宁现用的webrtc系统，该目录目前还处理预研和测试阶段。"}
   ]
 }

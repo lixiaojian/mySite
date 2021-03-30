@@ -46,7 +46,7 @@ export default class Experience extends React.Component{
                                         {exp.link?<div className="exp-job-title"><a target="_blank" href={exp.link}><Icon type="link" />{exp.jobTitle}</a></div>:<div className="exp-job-title">{exp.jobTitle}</div>}
                                     </div>
                                     <div className="experience-desc-box">
-                                        {exp.orgName?<div className="exp-org-name">{exp.orgName}</div>:''}
+                                        {exp.orgName?<div className="exp-org-name">{exp.orgName}{exp.sup? <sup>{ ' '+exp.sup }</sup> : ''}</div>:''}
                                         <p>{exp.workDesc}</p>
                                     </div>
                                 </div>
